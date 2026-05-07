@@ -41,4 +41,23 @@ class CuentaBancaria:
             
     def get_saldo(self):
         return self._saldo
+    
+class CuentaAhorro(CuentaBancaria):
+    def __init__(self, titular, saldo_inicial, tasa_interes):
+        super().__init__(titular, saldo_inicial)
+        self._tasa_interes = tasa_interes
+        
+    def aplicar_interes(self):
+        interes = self._saldo * self._tasa_interes
+        self._saldo += interes
+        print(f"Interés aplicado a {self._titular}. Interés: {interes}. Nuevo saldo: {self._saldo}")
+        
+# Crear instancia de CuentaAhorro
+cuenta_ahorro = CuentaAhorro("Juan Pérez", 1000, 0.05)
+# Mostrar saldo inicial
+print(f"Saldo inicial de {cuenta_ahorro._titular}: {cuenta_ahorro.get_saldo()}")
+# Realizar operaciones
+cuenta_ahorro.depositar(500)
+cuenta_ahorro.retirar(200)
+cuenta_ahorro.aplicar_interes()
 
