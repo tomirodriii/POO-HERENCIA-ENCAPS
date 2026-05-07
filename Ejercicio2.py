@@ -1,18 +1,18 @@
 # EJERCICIO 2: CUENTA BANCARIA 
 # Objetivo: Practicar encapsulamiento y herencia.
-#   Clases a implementar:
-#      1. Clase base: CuentaBancaria
-#      Atributos encapsulados: _saldo, _titular
-#      Métodos:
-#              __init__(titular, saldo_inicial)
-#              depositar(monto)
-#              retirar(monto)
-#              get_saldo()
-#      2. Clase hija: CuentaAhorro (hereda de CuentaBancaria)
-#      Atributo encapsulado: _tasa_interes
-#      Métodos:
-#              __init__(titular, saldo_inicial, tasa_interes)
-#              aplicar_interes()
+# Clases a implementar:
+#    1. Clase base: CuentaBancaria
+#           Atributos encapsulados: _saldo, _titular
+#           Métodos:
+#                __init__(titular, saldo_inicial)
+#                depositar(monto)
+#                retirar(monto)
+#                get_saldo()
+#   2. Clase hija: CuentaAhorro (hereda de CuentaBancaria)
+#           Atributo encapsulado: _tasa_interes
+#           Métodos:
+#                __init__(titular, saldo_inicial, tasa_interes)
+#                aplicar_interes()
 
 import os 
 os.system("cls")
